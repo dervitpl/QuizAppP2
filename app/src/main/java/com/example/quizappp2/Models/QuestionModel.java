@@ -2,12 +2,11 @@ package com.example.quizappp2.Models;
 
 public class QuestionModel {
 
-    private String question, optionA, optionB, optionC, optionD,correctAnsw;
+    private String question, optionA,optionB,optionC,optionD,correctAnsw;
 
     private String key;
 
     private int setNum;
-
 
     public QuestionModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAnsw, String key, int setNum) {
         this.question = question;
@@ -21,10 +20,10 @@ public class QuestionModel {
     }
 
 
-
     public QuestionModel() {
-
     }
+
+
     public String getQuestion() {
         return question;
     }
@@ -88,32 +87,4 @@ public class QuestionModel {
     public void setSetNum(int setNum) {
         this.setNum = setNum;
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

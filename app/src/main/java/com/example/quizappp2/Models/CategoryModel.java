@@ -1,9 +1,8 @@
 package com.example.quizappp2.Models;
 
-
 public class CategoryModel {
 
-    private String categoryName, categoryImage, key;
+    String categoryName,categoryImage,key;
     int setNum;
 
     public CategoryModel(String categoryName, String categoryImage, String key, int setNum) {
@@ -14,8 +13,8 @@ public class CategoryModel {
     }
 
     public CategoryModel() {
-
     }
+
     public String getCategoryName() {
         return categoryName;
     }
@@ -47,6 +46,4 @@ public class CategoryModel {
     public void setSetNum(int setNum) {
         this.setNum = setNum;
     }
-
-
 }

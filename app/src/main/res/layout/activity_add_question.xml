@@ -15,17 +15,18 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Enter your question"
-        android:inputType="text"
+        android:inputType="textPersonName"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="64dp"
-        android:layout_height="0dp"
-        android:text="Correct\n Answer"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Correct\nAnswer"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/inputQuestion"
         app:layout_constraintTop_toBottomOf="@+id/inputQuestion" />
@@ -38,7 +39,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <RadioGroup
             android:id="@+id/optionContainer"
@@ -77,7 +78,6 @@
                 android:layout_weight="1"
                 android:checked="true"
                 android:text="D)" />
-
         </RadioGroup>
 
         <LinearLayout
@@ -88,36 +88,36 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextText6"
+                android:id="@+id/editTextTextPersonName2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextText7"
+                android:id="@+id/editTextTextPersonName3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextText8"
+                android:id="@+id/editTextTextPersonName4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editTextText9"
+                android:id="@+id/editTextTextPersonName5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="textPersonName" />
         </LinearLayout>
 
     </LinearLayout>
@@ -126,7 +126,7 @@
         android:id="@+id/btnUploadQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="Upload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

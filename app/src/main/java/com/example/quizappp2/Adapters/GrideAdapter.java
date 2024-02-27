@@ -11,13 +11,11 @@ import android.widget.Toast;
 import com.example.quizappp2.QuestionActivity;
 import com.example.quizappp2.R;
 
-import org.w3c.dom.Text;
-
 public class GrideAdapter extends BaseAdapter {
 
-    public int sets =0;
+    public  int sets =0;
     private String category;
-    private String key;
+    private  String key;
 
     private GridListener listener;
 
@@ -46,24 +44,26 @@ public class GrideAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-
         View view1;
-        if (view==null) {
+
+        if (view==null){
+
             view1 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_sets,viewGroup,false);
 
         }
         else {
+
             view1 = view;
         }
-        if (i==0){
-            ((TextView).view1.findViewById(R.id.setName)).setText("+");
 
+        if (i==0){
+
+            ((TextView)view1.findViewById(R.id.setName)).setText("+");
 
         }
         else {
 
-            ((TextView).view1.findViewById(R.id.setName)).setText(String.valueOf(i));
-
+            ((TextView)view1.findViewById(R.id.setName)).setText(String.valueOf(i));
 
         }
 
@@ -71,15 +71,18 @@ public class GrideAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
 
+
                 if (i==0){
 
                     listener.addSets();
                 }
                 else {
+
                     Intent intent = new Intent(viewGroup.getContext(), QuestionActivity.class);
-                    intent.putExtra("setNum", i);
+                    intent.putExtra("setNum",i);
                     intent.putExtra("categoryName",category);
                     viewGroup.getContext().startActivity(intent);
+
                 }
 
             }
@@ -89,7 +92,9 @@ public class GrideAdapter extends BaseAdapter {
         return view1;
     }
 
-    public interface GridListener {
-    public void addSets();
+    public interface GridListener{
+
+        public void addSets();
     }
+
 }
