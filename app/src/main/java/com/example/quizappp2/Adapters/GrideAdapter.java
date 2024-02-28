@@ -70,23 +70,17 @@ public class GrideAdapter extends BaseAdapter {
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-                if (i==0){
-
-                    listener.addSets();
-                }
-                else {
-
+                if (i == 0) {
+                    if(listener != null) listener.addSets();
+                } else {
                     Intent intent = new Intent(viewGroup.getContext(), QuestionActivity.class);
-                    intent.putExtra("setNum",i);
-                    intent.putExtra("categoryName",category);
+                    intent.putExtra("setNum", i);
+                    intent.putExtra("categoryName", category); // This should match what you expect in QuestionActivity
                     viewGroup.getContext().startActivity(intent);
-
                 }
-
             }
         });
+
 
 
         return view1;

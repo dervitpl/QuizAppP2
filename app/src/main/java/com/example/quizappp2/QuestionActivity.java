@@ -44,6 +44,7 @@ public class QuestionActivity extends AppCompatActivity {
         int setNum = getIntent().getIntExtra("setNum", -1);
         String categoryName = getIntent().getStringExtra("categoryName");
 
+
         if (setNum == -1 || categoryName == null) {
             Toast.makeText(this, "Error: Missing required data.", Toast.LENGTH_SHORT).show();
             finish(); // Close Activity if required data is missing

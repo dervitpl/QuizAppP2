@@ -156,7 +156,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
 
 
-                String shareBody = "Hey, I am using Best Quiz App https://play.google.com";
+                String shareBody = "Patrz jaka super aplikacja do quizow";
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_TEXT,shareBody);

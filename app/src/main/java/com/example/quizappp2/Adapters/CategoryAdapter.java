@@ -2,6 +2,7 @@ package com.example.quizappp2.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,10 +42,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("CategoryAdapter", "Passing categoryKey: " + model.getKey());
+
                 Intent intent = new Intent(context, SetsActivity.class);
-                intent.putExtra("key", model.getCategoryName()); // Assuming CategoryModel has a method getCategoryId()
-                intent.putExtra("sets", model.getSetNum()); // And a method getSetNum()
+                intent.putExtra("categoryKey", model.getKey()); // Use getKey() for unique ID.
+                intent.putExtra("categoryName", model.getCategoryName()); // Pass category name for display or other uses.
+                intent.putExtra("sets", model.getSetNum());
                 context.startActivity(intent);
+
             }
         });
     }

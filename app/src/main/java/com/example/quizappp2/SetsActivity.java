@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -32,15 +33,18 @@ public class SetsActivity extends AppCompatActivity {
 
 
         database = FirebaseDatabase.getInstance();
-        key = getIntent().getStringExtra("key");
+        String categoryKey = getIntent().getStringExtra("categoryKey");
+        Log.d("SetsActivity", "Received categoryKey: " + categoryKey);
+        String categoryName = getIntent().getStringExtra("categoryName");
+        int sets = getIntent().getIntExtra("sets", 0);
 
-        adapter = new GrideAdapter(getIntent().getIntExtra("sets", 0),
-                getIntent().getStringExtra("category"), key, new GrideAdapter.GridListener() {
+
+        adapter = new GrideAdapter(sets, categoryName, categoryKey, new GrideAdapter.GridListener() {
             @Override
             public void addSets() {
 
 
-                database.getReference().child("categories").child(key)
+                database.getReference().child("categories").child(categoryKey)
                         .child("setNum").setValue(getIntent().getIntExtra("sets",0)+a++).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
