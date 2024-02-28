@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "1056869319949",
-    "firebase_url": "https://quiz-app-p2-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "quiz-app-p2",
-    "storage_bucket": "quiz-app-p2.appspot.com"
+    "project_number": "305055977164",
+    "firebase_url": "https://quizappp22-default-rtdb.firebaseio.com",
+    "project_id": "quizappp22",
+    "storage_bucket": "quizappp22.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1056869319949:android:6f52d55b81d06ba3415c44",
+        "mobilesdk_app_id": "1:305055977164:android:af6514fc8de27d41b03c69",
         "android_client_info": {
           "package_name": "com.example.quizappp2"
         }
@@ -16,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAt2N7KdkAM1OkQh2yTqsFY7uvSAmE9D_k"
+          "current_key": "AIzaSyDDYPhISKtnSCy2W0Av9L8C6YhJ9Y9joWE"
         }
       ],
       "services": {
