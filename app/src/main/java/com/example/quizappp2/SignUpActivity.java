@@ -60,7 +60,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                                     database.getReference().child("admin_user").child(id).setValue(map);
 
-                                    Intent intent = new Intent(SignUpActivity.this, com.example.quizappp2.MainActivity.class);
+                                    Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
                                     startActivity(intent);
                                     finish();
 
@@ -80,7 +80,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(SignUpActivity.this, com.example.quizappp2.SignInActivity.class);
+                Intent intent = new Intent(SignUpActivity.this,SignInActivity.class);
                 startActivity(intent);
                 finish();
 

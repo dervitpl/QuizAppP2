@@ -13,7 +13,12 @@
           "package_name": "com.example.quizappp2"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+
+
+
+
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDDYPhISKtnSCy2W0Av9L8C6YhJ9Y9joWE"
@@ -21,7 +26,9 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+
+          ]
         }
       }
     }

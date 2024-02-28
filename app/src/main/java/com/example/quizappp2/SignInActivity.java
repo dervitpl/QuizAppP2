@@ -29,9 +29,7 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+        getSupportActionBar().hide();
 
         auth = FirebaseAuth.getInstance();
         currentUser = auth.getCurrentUser();
@@ -54,7 +52,7 @@ public class SignInActivity extends AppCompatActivity {
                                 dialog.dismiss();
                                 if (task.isSuccessful()){
 
-                                    Intent intent = new Intent(SignInActivity.this, com.example.quizappp2.MainActivity.class);
+                                    Intent intent = new Intent(SignInActivity.this,MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -71,7 +69,7 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(SignInActivity.this, com.example.quizappp2.SignUpActivity.class);
+                Intent intent = new Intent(SignInActivity.this,SignUpActivity.class);
                 startActivity(intent);
 
             }
@@ -79,7 +77,7 @@ public class SignInActivity extends AppCompatActivity {
 
         if (currentUser!=null){
 
-            Intent intent = new Intent(SignInActivity.this, com.example.quizappp2.MainActivity.class);
+            Intent intent = new Intent(SignInActivity.this,MainActivity.class);
             startActivity(intent);
             finish();
         }

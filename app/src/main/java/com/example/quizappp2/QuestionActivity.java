@@ -124,7 +124,7 @@ public class QuestionActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent intent = new Intent(QuestionActivity.this, com.example.quizappp2.AddQuestionActivity.class);
+                Intent intent = new Intent(QuestionActivity.this,AddQuestionActivity.class);
                 intent.putExtra("category",categoryName);
                 intent.putExtra("setNum",setNum);
                 startActivity(intent);

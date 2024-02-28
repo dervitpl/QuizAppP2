@@ -56,5 +56,6 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.8")
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation (platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
-    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8") // Use the version from Kotlin BOM
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.4.0")
+    implementation("com.github.ismaeldivita:chip-navigation-bar:1.4.0")// Use the version from Kotlin BOM
 }
