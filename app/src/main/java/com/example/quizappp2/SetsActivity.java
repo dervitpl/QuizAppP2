@@ -3,7 +3,6 @@ package com.example.quizappp2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -19,8 +18,10 @@ public class SetsActivity extends AppCompatActivity {
     ActivitySetsBinding binding;
     FirebaseDatabase database;
 
-    String category;
-    int sets;
+    GrideAdapter adapter;
+
+    int a = 1;
+    String key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,34 +30,52 @@ public class SetsActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
 
-        database = FirebaseDatabase.getInstance();
-        category = getIntent().getStringExtra("category");
-        sets = getIntent().getIntExtra("sets", 0);
 
-        // Initialize the adapter before any anonymous class or lambda expression
-        GrideAdapter adapter = new GrideAdapter(sets, category, new GrideAdapter.GridListener() {
+        database = FirebaseDatabase.getInstance();
+        key = getIntent().getStringExtra("key");
+
+        adapter = new GrideAdapter(getIntent().getIntExtra("sets", 0),
+                getIntent().getStringExtra("category"), key, new GrideAdapter.GridListener() {
             @Override
             public void addSets() {
-                // Your existing implementation
-            }
 
-            @Override
-            public void onSetSelected(int setNum) {
-                // Launch QuestionActivity with the selected set number
-                Intent intent = new Intent(SetsActivity.this, QuestionActivity.class);
-                intent.putExtra("categoryName", category);
-                intent.putExtra("setNum", setNum);
-                startActivity(intent);
+
+                database.getReference().child("categories").child(key)
+                        .child("setNum").setValue(getIntent().getIntExtra("sets",0)+a++).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+
+
+                                if (task.isSuccessful()){
+
+                                    adapter.sets++;
+                                    adapter.notifyDataSetChanged();
+
+                                }
+                                else {
+
+                                    Toast.makeText(SetsActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+
+
+                            }
+                        });
+
+
             }
         });
+
 
         binding.gridView.setAdapter(adapter);
 
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 onBackPressed();
             }
         });
+
+
     }
 }
