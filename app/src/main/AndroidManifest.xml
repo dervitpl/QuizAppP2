@@ -13,19 +13,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAppP2"
         tools:targetApi="31">
+
+        <!-- MainActivity is set as the LAUNCHER activity -->
         <activity
-            android:name=".SignInActivity"
-            android:exported="true" >
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- SignInActivity and SignUpActivity do not have the MAIN and LAUNCHER intent-filter -->
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true" />
         <activity
             android:name=".SignUpActivity"
-            android:exported="false" />
-
+            android:exported="true" />
         <activity
             android:name=".AddQuestionActivity"
             android:exported="false" />
@@ -36,11 +41,7 @@
         <activity
             android:name=".SetsActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
 
-        </activity>
     </application>
 
 </manifest>
