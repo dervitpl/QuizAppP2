@@ -92,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
                     binding.toolBarText.setText("Choose Category");
                     binding.addCategory.setVisibility(View.VISIBLE);
                     fragment = new HomeFragment();
-                } else if (i == R.id.user) {
-                    binding.toolBarText.setText("User");
-                    binding.addCategory.setVisibility(View.GONE);
-                    fragment = new UserFragment();
+//                } else if (i == R.id.user) {
+//                    binding.toolBarText.setText("User");
+//                    binding.addCategory.setVisibility(View.GONE);
+//                    fragment = new UserFragment();
                 } else if (i == R.id.profile) {
                     binding.toolBarText.setText("Profile");
                     binding.addCategory.setVisibility(View.GONE);

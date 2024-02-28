@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.example.quizappp2.Adapters.CategoryAdapter;
 import com.example.quizappp2.Models.CategoryModel;
-import com.example.quizappp2.Models.UserModel;
+//import com.example.quizappp2.Models.UserModel;
 import com.example.quizappp2.R;
 import com.example.quizappp2.SignInActivity;
 import com.example.quizappp2.databinding.FragmentHomeBinding;

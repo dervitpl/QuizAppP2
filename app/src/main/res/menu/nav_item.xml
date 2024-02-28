@@ -10,13 +10,13 @@
         app:cnb_iconColor="#ffffff"
         app:cnb_textColor="#ffffff" />
 
-    <item
-        android:id="@+id/user"
-        android:icon="@drawable/user"
-        android:title="User"
-        app:cnb_backgroundColor="@color/toolbarBack"
-        app:cnb_iconColor="#ffffff"
-        app:cnb_textColor="#ffffff" />
+<!--    <item-->
+<!--        android:id="@+id/user"-->
+<!--        android:icon="@drawable/user"-->
+<!--        android:title="User"-->
+<!--        app:cnb_backgroundColor="@color/toolbarBack"-->
+<!--        app:cnb_iconColor="#ffffff"-->
+<!--        app:cnb_textColor="#ffffff" />-->
 
 
     <item
